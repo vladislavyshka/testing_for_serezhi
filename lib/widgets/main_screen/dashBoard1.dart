@@ -15,16 +15,16 @@ class _DashBoard1State extends State<DashBoard1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         flexibleSpace: ClipRect(
           child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
             child: Container(color: Colors.transparent),
           ),
         ),
         shape: const Border(
-          bottom:
-              BorderSide(color: Color.fromARGB(200, 255, 255, 255), width: 1),
+          bottom: BorderSide(color: Color(0xCCFFFFFF), width: 1),
         ),
         elevation: 0,
         automaticallyImplyLeading: false,

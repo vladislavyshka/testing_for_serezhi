@@ -14,10 +14,11 @@ class _LesScreen extends State<LesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         flexibleSpace: ClipRect(
           child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
             child: Container(color: Colors.transparent),
           ),
         ),
