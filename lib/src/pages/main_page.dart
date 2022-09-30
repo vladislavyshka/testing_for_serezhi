@@ -1,19 +1,19 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/widgets/main_screen/dashBoard1.dart';
-import 'package:flutter_application_2/widgets/main_screen/lessboard_screen.dart';
-import 'package:flutter_application_2/widgets/main_screen/profile_screen.dart';
-import 'package:flutter_application_2/widgets/main_screen/tablescreen.dart';
+import 'package:flutter_application_2/src/pages/dashboard_page.dart';
+import 'package:flutter_application_2/src/pages/tasks_page.dart';
+import 'package:flutter_application_2/src/pages/profile_page.dart';
+import 'package:flutter_application_2/src/pages/timetable_page.dart';
 
-class DashBoard extends StatefulWidget {
-  const DashBoard({super.key});
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
 
   @override
-  State<DashBoard> createState() => _DashBoardState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _DashBoardState extends State<DashBoard> {
+class _MainPageState extends State<MainPage> {
   int _selectedPage = 0;
   void onSelectedPage(int index) {
     if (_selectedPage == index) return;
@@ -23,10 +23,10 @@ class _DashBoardState extends State<DashBoard> {
   }
 
   static const List<Widget> _widgetOptions = <Widget>[
-    DashBoard1(),
-    TableScreen(),
-    LesScreen(),
-    ProfileScreen(),
+    DashBoardPage(),
+    TimeTablePage(),
+    TaskPage(),
+    ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class _DashBoardState extends State<DashBoard> {
       body: _widgetOptions[_selectedPage],
       bottomNavigationBar: Stack(
         children: [
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).padding.bottom + 57,
             child: ClipRect(
               child: BackdropFilter(

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
-class ExitBut extends StatelessWidget {
-  const ExitBut({
+class OutlinedButtonDegree extends StatelessWidget {
+  final String buttonText;
+  final void Function()? onPressed;
+  const OutlinedButtonDegree({
     Key? key,
+    required this.buttonText,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -12,11 +16,11 @@ class ExitBut extends StatelessWidget {
       child: SizedBox(
         width: double.infinity,
         child: OutlinedButton(
-          onPressed: () => Navigator.of(context).pushNamed('/main_screen'),
-          child: const Center(
+          onPressed: onPressed,
+          child: Center(
             child: Text(
-              'Войти',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              buttonText,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
             ),
           ),
         ),
@@ -25,9 +29,13 @@ class ExitBut extends StatelessWidget {
   }
 }
 
-class RegBut extends StatelessWidget {
-  const RegBut({
+class ElevatedButtonDegree extends StatelessWidget {
+  final String buttonText;
+  final void Function()? onPressed;
+  const ElevatedButtonDegree({
     Key? key,
+    required this.buttonText,
+    this.onPressed,
   }) : super(key: key);
 
   @override
@@ -37,10 +45,10 @@ class RegBut extends StatelessWidget {
       child: SizedBox(
         width: double.infinity,
         child: ElevatedButton(
-          onPressed: () {},
-          child: const Text(
-            'Зарегистрироваться',
-            style: TextStyle(
+          onPressed: onPressed,
+          child: Text(
+            buttonText,
+            style: const TextStyle(
                 fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
           ),
         ),
