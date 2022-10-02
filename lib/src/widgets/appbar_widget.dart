@@ -1,21 +1,16 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class AppBarDegree extends StatelessWidget implements PreferredSizeWidget {
   final String appBarText;
   final BuildContext context;
-  const AppBarDegree(this.appBarText, {super.key, required this.context});
+  final Widget? blur;
+  const AppBarDegree(this.appBarText,
+      {super.key, required this.context, this.blur});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      flexibleSpace: ClipRect(
-        child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
-          child: Container(color: Colors.transparent),
-        ),
-      ),
+      flexibleSpace: blur,
       shape: const Border(
         bottom: BorderSide(color: Color(0xCCFFFFFF), width: 1),
       ),

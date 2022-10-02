@@ -19,6 +19,12 @@ class _TaskPage extends State<TaskPage> {
       appBar: AppBarDegree(
         'Задания',
         context: context,
+        blur: ClipRect(
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
+            child: Container(color: Colors.transparent),
+          ),
+        ),
       ),
     );
   }

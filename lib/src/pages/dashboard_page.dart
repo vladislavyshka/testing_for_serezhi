@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/src/widgets/appbar_widget.dart';
 import 'package:flutter_application_2/src/widgets/timetable_widgets.dart';
@@ -19,6 +21,12 @@ class _DashBoardPageState extends State<DashBoardPage> {
       appBar: AppBarDegree(
         'Рабочая область',
         context: context,
+        blur: ClipRect(
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
+            child: Container(color: Colors.transparent),
+          ),
+        ),
       ),
       body: ListView(
         physics: const BouncingScrollPhysics(),

@@ -19,6 +19,12 @@ class _TimeTablePageState extends State<TimeTablePage> {
       appBar: AppBarDegree(
         'Расписание',
         context: context,
+        blur: ClipRect(
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
+            child: Container(color: Colors.transparent),
+          ),
+        ),
       ),
     );
   }
