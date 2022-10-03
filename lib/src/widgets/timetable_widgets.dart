@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class TimeTable extends StatelessWidget {
   final String subj;
   final String teach;
+  final String classRoom;
 
   const TimeTable({
     Key? key,
     required this.subj,
     required this.teach,
+    required this.classRoom,
   }) : super(key: key);
 
   @override
@@ -54,7 +56,7 @@ class TimeTable extends StatelessWidget {
                 ),
               ),
             ),
-            Text('224 каб.', style: Theme.of(context).textTheme.subtitle1),
+            Text(classRoom, style: Theme.of(context).textTheme.subtitle1),
           ],
         ),
         const Divider(

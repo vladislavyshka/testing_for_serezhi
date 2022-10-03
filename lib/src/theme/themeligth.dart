@@ -64,7 +64,9 @@ ThemeData lightTheme = ThemeData(
       ),
       shadowColor: MaterialStateProperty.all(Colors.white),
       elevation: MaterialStateProperty.all(0),
-      padding: MaterialStateProperty.all(const EdgeInsets.all(14)),
+      padding: MaterialStateProperty.all(
+        const EdgeInsets.all(14),
+      ),
       shape: MaterialStateProperty.all(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),

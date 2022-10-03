@@ -15,7 +15,6 @@ class _TaskPage extends State<TaskPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
       appBar: AppBarDegree(
         'Задания',
         context: context,

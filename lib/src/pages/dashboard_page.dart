@@ -63,16 +63,19 @@ class _DashBoardPageState extends State<DashBoardPage> {
                       subj:
                           'МДК 03.02 Безопасность функционирования информационных систем',
                       teach: 'Коломис Ю.В',
+                      classRoom: '224 каб',
                     ),
                     const TimeTable(
                       subj:
                           'МДК 04.01 Выполнение работ по профессии наладчик технологичсекого оборудования',
                       teach: 'Бирюков А.С.',
+                      classRoom: '224 каб',
                     ),
                     const TimeTable(
                       subj:
                           'МДК 02.02 Организация администрирования компьютерных систем',
                       teach: 'Сагалаев А.В.',
+                      classRoom: '224 каб',
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 13),
@@ -87,14 +90,17 @@ class _DashBoardPageState extends State<DashBoardPage> {
                     const TimeTable(
                       subj: 'Метрология',
                       teach: 'Шишулина И.В.',
+                      classRoom: '224 каб',
                     ),
                     const TimeTable(
                       subj: 'Метрология',
                       teach: 'Шишулина И.В.',
+                      classRoom: '224 каб',
                     ),
                     const TimeTable(
                       subj: 'Метрология',
                       teach: 'Шишулина И.В.',
+                      classRoom: '224 каб',
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 13),
@@ -109,14 +115,17 @@ class _DashBoardPageState extends State<DashBoardPage> {
                     const TimeTable(
                       subj: 'Метрология',
                       teach: 'Шишулина И.В.',
+                      classRoom: '224 каб',
                     ),
                     const TimeTable(
                       subj: 'Метрология',
                       teach: 'Шишулина И.В.',
+                      classRoom: '224 каб',
                     ),
                     const TimeTable(
                       subj: 'Метрология',
                       teach: 'Шишулина И.В.',
+                      classRoom: '224 каб',
                     ),
                   ],
                 ),

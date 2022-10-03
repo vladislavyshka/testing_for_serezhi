@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/src/widgets/MenuButton_widget.dart';
 import 'package:flutter_application_2/src/widgets/appbar_widget.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -49,19 +50,23 @@ class _ProfilePageState extends State<ProfilePage> {
                 ColoredBox(
                   color: Colors.white,
                   child: Column(
-                    children: const [
-                      LoginPasswordwidgets(
-                        loginPasswordText: 'Логин',
-                        loginPasswordTextTwo: 'Vladislavyshka',
-                        dividerDegree: Divider(
+                    children: [
+                      const MenuButtonDegree(
+                        title: 'Логин',
+                        value: 'vladislavyshka',
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: Divider(
                           height: 0,
                           thickness: 1,
                           color: Color(0xFFF4F4F4),
                         ),
                       ),
-                      LoginPasswordwidgets(
-                        loginPasswordText: 'Пароль',
-                        loginPasswordTextTwo: 'сбросить',
+                      MenuButtonDegree(
+                        title: 'Пароль',
+                        value: 'Сбросить',
+                        onTap: () {},
                       ),
                     ],
                   ),
@@ -73,18 +78,21 @@ class _ProfilePageState extends State<ProfilePage> {
                   color: Colors.white,
                   child: Column(
                     children: const [
-                      LoginPasswordwidgets(
-                        loginPasswordText: 'Группа',
-                        loginPasswordTextTwo: 'КС-31',
-                        dividerDegree: Divider(
+                      MenuButtonDegree(
+                        title: 'Группа',
+                        value: 'КС-31',
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: Divider(
                           height: 0,
                           thickness: 1,
                           color: Color(0xFFF4F4F4),
                         ),
                       ),
-                      LoginPasswordwidgets(
-                        loginPasswordText: 'Подгруппа',
-                        loginPasswordTextTwo: '1',
+                      MenuButtonDegree(
+                        title: 'Подгруппа',
+                        value: '1',
                       ),
                     ],
                   ),
@@ -95,72 +103,31 @@ class _ProfilePageState extends State<ProfilePage> {
                 ColoredBox(
                   color: Colors.white,
                   child: Column(
-                    children: const [
-                      LoginPasswordwidgets(
-                        loginPasswordText: 'Настройки',
-                        loginPasswordTextTwo: '',
-                        dividerDegree: Divider(
+                    children: [
+                      MenuButtonDegree(
+                        title: 'Настройки',
+                        onTap: () {},
+                      ),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: Divider(
                           height: 0,
                           thickness: 1,
                           color: Color(0xFFF4F4F4),
                         ),
                       ),
-                      LoginPasswordwidgets(
-                        loginPasswordText: 'Выход',
-                        loginPasswordTextTwo: '',
+                      MenuButtonDegree(
+                        title: 'Выйти',
+                        onTap: () {},
                       ),
                     ],
                   ),
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
-    );
-  }
-}
-
-class LoginPasswordwidgets extends StatelessWidget {
-  final String loginPasswordText;
-  final String loginPasswordTextTwo;
-  final Widget? dividerDegree;
-  const LoginPasswordwidgets({
-    Key? key,
-    required this.loginPasswordText,
-    required this.loginPasswordTextTwo,
-    this.dividerDegree,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    loginPasswordText,
-                    style: Theme.of(context).textTheme.headline1,
-                  ),
-                  Text(
-                    loginPasswordTextTwo,
-                    style: Theme.of(context).textTheme.headline1,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: dividerDegree,
-        ),
-      ],
     );
   }
 }

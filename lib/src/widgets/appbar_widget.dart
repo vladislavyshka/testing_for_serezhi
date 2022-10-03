@@ -37,6 +37,5 @@ class AppBarDegree extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize =>
-      Size.fromHeight(MediaQuery.of(context).padding.top + 7);
+  Size get preferredSize => const Size(double.infinity, 54);
 }
