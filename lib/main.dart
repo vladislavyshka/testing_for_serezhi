@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/src/pages/notification_page.dart';
 import 'package:flutter_application_2/src/theme/themeligth.dart';
 import 'package:flutter_application_2/src/pages/auth_page.dart';
 import 'package:flutter_application_2/src/pages/login_page.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/': ((context) => const AuthPage()),
         '/login_page': (context) => const LoginPage(),
         '/main_page': (context) => const MainPage(),
+        '/notification_page': (context) => const NotificationPage(),
       },
       initialRoute: '/',
     );

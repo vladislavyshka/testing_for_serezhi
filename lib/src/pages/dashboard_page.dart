@@ -55,7 +55,7 @@ class _DashBoardPageState extends State<DashBoardPage> {
                         alignment: Alignment.topLeft,
                         child: Text(
                           'Сегодня, 1 сен.',
-                          style: Theme.of(context).textTheme.headline5,
+                          style: Theme.of(context).textTheme.headline1,
                         ),
                       ),
                     ),

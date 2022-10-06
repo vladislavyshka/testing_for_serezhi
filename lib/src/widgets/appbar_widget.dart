@@ -4,8 +4,14 @@ class AppBarDegree extends StatelessWidget implements PreferredSizeWidget {
   final String appBarText;
   final BuildContext context;
   final Widget? blur;
+  final bool? automaticallyImplyLeading;
+  final Widget? leading;
   const AppBarDegree(this.appBarText,
-      {super.key, required this.context, this.blur});
+      {super.key,
+      required this.context,
+      this.blur,
+      this.automaticallyImplyLeading,
+      this.leading});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +21,10 @@ class AppBarDegree extends StatelessWidget implements PreferredSizeWidget {
         bottom: BorderSide(color: Color(0xCCFFFFFF), width: 1),
       ),
       elevation: 0,
-      automaticallyImplyLeading: false,
+      automaticallyImplyLeading:
+          automaticallyImplyLeading == null ? false : true,
       backgroundColor: const Color(0xCCFFFFFF),
+      leading: leading,
       shadowColor: const Color(0xffF4F4F4),
       centerTitle: false,
       title: Text(
@@ -25,7 +33,9 @@ class AppBarDegree extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         IconButton(
-          onPressed: (() {}),
+          splashRadius: 0.1,
+          onPressed: () =>
+              Navigator.of(context).pushNamed('/notification_page'),
           icon: const Icon(
             Icons.notifications_outlined,
             color: Colors.black,
