@@ -6,19 +6,23 @@ class AppBarDegree extends StatelessWidget implements PreferredSizeWidget {
   final Widget? blur;
   final bool? automaticallyImplyLeading;
   final Widget? leading;
+  final PreferredSizeWidget? bottom;
+  final double? height;
   const AppBarDegree(this.appBarText,
       {super.key,
       required this.context,
       this.blur,
       this.automaticallyImplyLeading,
-      this.leading});
+      this.leading,
+      this.bottom,
+      this.height});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       flexibleSpace: blur,
       shape: const Border(
-        bottom: BorderSide(color: Color(0xCCFFFFFF), width: 1),
+        bottom: BorderSide(color: Color(0xFFF4F4F4), width: 1),
       ),
       elevation: 0,
       automaticallyImplyLeading:
@@ -43,9 +47,11 @@ class AppBarDegree extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ],
+      bottom: bottom,
     );
   }
 
   @override
-  Size get preferredSize => const Size(double.infinity, 54);
+  Size get preferredSize =>
+      Size(double.infinity, height == null ? 54 : height!);
 }

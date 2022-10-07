@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/src/pages/dashboard_page.dart';
 import 'package:flutter_application_2/src/pages/tasks_page.dart';
@@ -17,9 +16,11 @@ class _MainPageState extends State<MainPage> {
   int _selectedPage = 0;
   void onSelectedPage(int index) {
     if (_selectedPage == index) return;
-    setState(() {
-      _selectedPage = index;
-    });
+    setState(
+      () {
+        _selectedPage = index;
+      },
+    );
   }
 
   static const List<Widget> _widgetOptions = <Widget>[
@@ -39,6 +40,7 @@ class _MainPageState extends State<MainPage> {
         data: Theme.of(context).copyWith(
           splashColor: Colors.transparent,
           highlightColor: Colors.transparent,
+          hoverColor: Colors.transparent,
         ),
         child: Stack(
           children: [

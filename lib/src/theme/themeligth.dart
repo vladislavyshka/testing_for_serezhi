@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 ThemeData lightTheme = ThemeData(
+  primarySwatch: Colors.grey,
   fontFamily: 'Gilroy',
   textTheme: const TextTheme(
     headline4: TextStyle(
@@ -35,7 +36,7 @@ ThemeData lightTheme = ThemeData(
     ),
     bodyText1: TextStyle(
       fontFamily: 'Gilroy',
-      fontSize: 14,
+      fontSize: 16,
       fontWeight: FontWeight.w400,
       color: Colors.black,
     ),
