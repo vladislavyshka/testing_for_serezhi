@@ -31,7 +31,7 @@ class _TabBarDegreeState extends State<TabBarDegree> {
                 baselineType: TextBaseline.alphabetic,
                 baseline: 15,
                 child: Text(
-                  'Не выполнен',
+                  'Не выполнено',
                   textAlign: TextAlign.center,
                 ),
               ),

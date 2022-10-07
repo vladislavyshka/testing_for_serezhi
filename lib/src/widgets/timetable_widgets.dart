@@ -4,12 +4,14 @@ class TimeTable extends StatelessWidget {
   final String subj;
   final String teach;
   final String classRoom;
+  final bool? divider;
 
   const TimeTable({
     Key? key,
     required this.subj,
     required this.teach,
     required this.classRoom,
+    this.divider,
   }) : super(key: key);
 
   @override
@@ -59,12 +61,19 @@ class TimeTable extends StatelessWidget {
             Text(classRoom, style: Theme.of(context).textTheme.subtitle1),
           ],
         ),
-        const Divider(
-          height: 0,
-          thickness: 1,
-          color: Color(0xFFF6F6F6),
-        ),
+        divider == false
+            ? const Divider(
+                height: 0,
+                color: Colors.transparent,
+              )
+            : const Divider(
+                height: 0,
+                thickness: 1,
+                color: Color(0xFFF6F6F6),
+              ),
       ],
     );
   }
 }
+
+// 0xFFF6F6F6

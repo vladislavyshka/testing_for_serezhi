@@ -56,3 +56,34 @@ class ElevatedButtonDegree extends StatelessWidget {
     );
   }
 }
+
+class AddButton extends StatelessWidget {
+  final void Function()? onPressed;
+  const AddButton({
+    Key? key,
+    this.onPressed,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0, 0, 16, 75),
+      child: Align(
+        alignment: Alignment.bottomRight,
+        child: TextButton(
+          onPressed: onPressed,
+          style: TextButton.styleFrom(
+            backgroundColor: Colors.black,
+            shape: const CircleBorder(),
+            fixedSize: const Size(63, 63),
+          ),
+          child: const Icon(
+            Icons.add_outlined,
+            color: Colors.white,
+            size: 34,
+          ),
+        ),
+      ),
+    );
+  }
+}
