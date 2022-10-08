@@ -1,9 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/src/pages/dashboard_page.dart';
-import 'package:flutter_application_2/src/pages/tasks_page.dart';
-import 'package:flutter_application_2/src/pages/profile_page.dart';
-import 'package:flutter_application_2/src/pages/timetable_page.dart';
+import 'package:flutter_application_2/src/pages/widget_page/dashboard_page.dart';
+import 'package:flutter_application_2/src/pages/widget_page/tasks_page.dart';
+import 'package:flutter_application_2/src/pages/widget_page/profile_page.dart';
+import 'package:flutter_application_2/src/pages/widget_page/timetable_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

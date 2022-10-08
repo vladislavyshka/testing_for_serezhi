@@ -4,11 +4,14 @@ class TextFieldDegree extends StatelessWidget {
   final String textFieldText;
   final bool obscureText;
   final TextEditingController? textEditingController;
-  const TextFieldDegree(
-      {super.key,
-      required this.textFieldText,
-      required this.obscureText,
-      this.textEditingController});
+  final int maxlines;
+  const TextFieldDegree({
+    super.key,
+    required this.textFieldText,
+    required this.obscureText,
+    this.textEditingController,
+    required this.maxlines,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +36,7 @@ class TextFieldDegree extends StatelessWidget {
             obscureText: obscureText,
             style: Theme.of(context).textTheme.bodyText1,
             textInputAction: TextInputAction.next,
+            maxLines: maxlines,
             decoration: InputDecoration(
               contentPadding: const EdgeInsets.all(10),
               filled: true,

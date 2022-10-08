@@ -54,12 +54,85 @@ class _AddTaskPageState extends State<AddTaskPage> {
                   height: 14,
                 ),
                 const TextFieldDegree(
-                    textFieldText: 'Задание', obscureText: false),
+                  textFieldText: 'Задание',
+                  obscureText: false,
+                  maxlines: 5,
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 2),
+                  child: Text('Теги',
+                      style: Theme.of(context).textTheme.headline1),
+                ),
+                Container(
+                  height: 44,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFAFAFA),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: const Color(0xFFF4F4F4),
+                    ),
+                  ),
+                  child: Row(
+                    children: const [
+                      Tag(),
+                      Tag(),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
         ),
       ),
+    );
+  }
+}
+
+class Tag extends StatelessWidget {
+  const Tag({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: Container(
+            height: 24,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(4),
+              color: Colors.black,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(5),
+              child: Row(
+                children: const [
+                  Icon(
+                    Icons.close,
+                    color: Colors.white,
+                    size: 14,
+                  ),
+                  Baseline(
+                    baseline: 10,
+                    baselineType: TextBaseline.alphabetic,
+                    child: Text(
+                      'письменно',
+                      textAlign: TextAlign.end,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Roboto',
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }

@@ -25,8 +25,13 @@ class LoginPage extends StatelessWidget {
                   TextFieldDegree(
                     textFieldText: 'Логин',
                     obscureText: false,
+                    maxlines: 1,
                   ),
-                  TextFieldDegree(textFieldText: 'Пароль', obscureText: true),
+                  TextFieldDegree(
+                    textFieldText: 'Пароль',
+                    obscureText: true,
+                    maxlines: 1,
+                  ),
                 ],
               ),
             ),
